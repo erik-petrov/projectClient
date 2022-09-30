@@ -35,7 +35,7 @@
                 </p>
 
                 {#if error}
-                    {error}
+                    <div class="alert alert-danger" role="alert">{error}</div>
                 {/if}
 
                 <form on:submit|preventDefault={submit}>
