@@ -60,6 +60,7 @@
 </style>
 
 <!-- {JSON.stringify($session)} -->
+
 <nav>
 	<ul>
 		{#if $session.token}
