@@ -1,10 +1,10 @@
-<!--<script context="module">
-    export async function preload({ params }, { user }) {
-        if (user) {
+<script context="module">
+    export async function preload({ params }, { token }) {
+        if (token) {
             this.redirect(302, `/`);
         }
     }
-</script>-->
+</script>
 
 <script>
     import { goto, stores } from '@sapper/app';
@@ -40,7 +40,9 @@
                     <a href="/register">Need an account?</a>
                 </p>
 
-                {#if errors}{errors}{/if}
+                {#if errors}
+                    <div class="alert alert-danger" role="alert">{errors}</div>
+                {/if}
 
                 <form on:submit|preventDefault={submit}>
                     <fieldset class="form-group">
